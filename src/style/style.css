@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-azul-oscuro: #1F4690;
+    --color-azul-claro: #3A5BA0;
+    --color-amarillo-oscuro: #FFA500;
+    --color-amarillo-claro: #FFE5B4,
+}
+
+.contenedor-responsive {
+    margin: auto;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* NAVBAR */
+.header-navbar {
+    background-color: var(--color-azul-oscuro);
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    z-index: 10;
+    top: 0;
+}
+
+.logo {
+    height: 4rem;
+}
+
+/* HERO */
+.hero {
+    background-color: var(--color-azul-claro);
+    height: 90vh;
+    position: relative;
+}
+
+/* ====== */
+
+.btn-cta {
+    margin-top: 10px;
+    outline: 3px solid #facc15;
+    color: #facc15;
+    border-radius: 13px;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 200px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(0deg);
+}
+
+.span-cta {
+    display: inline-block;
+}
+
+.btn-cta::before {
+    content: '';
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background-color: #facc15;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn-cta:hover {
+    color: #f2f2f2;
+}
+
+.btn-cta:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+    .btn-cta {
+        width: 125px;
+        padding: 5px 15px;
+        font-size: 1rem;
+    }
+}
+
+/* ====== */
+.svg-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    margin-right: 5rem;
+}
+
+.svg-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    margin-left: 5rem;
+}
+
+@media (max-width: 768px) {
+
+    .svg-1,
+    .svg-2 {
+        width: 13rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .svg-1,
+    .svg-2 {
+        width: 10rem;
+    }
+}
+
+/* FOOTER */
+.footer {
+    height: 15vh;
+    background-color: var(--color-azul-oscuro);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* CONNETC */
+.connect {
+    background-color: var(--color-amarillo-claro);
+    height: 50vh;
+}
+
+/* CAROUSEL */
+.swiper {
+    width: 100%;
+    height: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.contenedor-gallery {
+    background-color: var(--color-azul-claro);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* MANTENIMIENTO */
+.mantenimiento {
+    background-color: var(--color-azul-claro);
+    height: 75vh;
+}
+
+/* ERROR */
+.error {
+    background-color: var(--color-azul-claro);
+    height: 75vh;
+}
+
+/* DETALLE */
+
+.detail-info {
+    text-shadow: 5px 5px 8px rgba(53,62,180,0.73);
+}
+
+/* COLLAPSIBLE */
+.Collapsible__trigger {
+    /* border: 1px solid black; */
+    border: 0;
+    /* padding: 8px 30px; */
+    padding: 0.5rem;
+    background-color: #FACC15;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.25;
+    text-shadow: 5px 5px 8px rgba(53, 62, 180, 0.73);
+    margin-bottom: 1.1rem;
+    /* width: 100% !important; */
+    display: block;
+}
+
+.Collapsible__trigger:hover {
+    /* background-color: #FACC15; */
+    box-shadow: 10px 5px 5px #000;
+}
+
+.btnLike {
+    color: red;
+}
