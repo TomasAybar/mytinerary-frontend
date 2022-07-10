@@ -11,7 +11,7 @@ const userActions = {
             try {
 
                 // const res = await axios.post('http://localhost:8000/api/signup', data);
-                const res = await axios.post('https://mytinerary-aybar.herokuapp.com/api/signup', data);
+                const res = await axios.post('https://mytinerary-backend-aybar.herokuapp.com/api/signup', data);
                 // console.log(res)
 
                 dispatch({
@@ -36,7 +36,7 @@ const userActions = {
             try {
 
                 // const res = await axios.post('http://localhost:8000/api/signin', data)
-                const res = await axios.post('https://mytinerary-aybar.herokuapp.com/api/signin', data)
+                const res = await axios.post('https://mytinerary-backend-aybar.herokuapp.com/api/signin', data)
 
                 // console.log(res)
 
@@ -87,7 +87,7 @@ const userActions = {
             //     }
 
             // })
-            const res = await axios.get('https://mytinerary-aybar.herokuapp.com/api/signinToken', {
+            const res = await axios.get('https://mytinerary-backend-aybar.herokuapp.com/api/signinToken', {
 
                 headers: {
                     'Authorization': 'Bearer ' + token

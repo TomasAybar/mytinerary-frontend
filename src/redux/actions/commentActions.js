@@ -15,7 +15,7 @@ const commentActions = {
                 //         'Authorization': 'Bearer ' + token
                 //     }
                 // })
-                const res = await axios.post('https://mytinerary-aybar.herokuapp.com/api/tineraries/comment', { data }, {
+                const res = await axios.post('https://mytinerary-backend-aybar.herokuapp.com/api/tineraries/comment', { data }, {
                     headers: {
                         'Authorization': 'Bearer ' + token
                     }
@@ -49,7 +49,7 @@ const commentActions = {
             //     }
 
             // })
-            const res = await axios.post(`https://mytinerary-aybar.herokuapp.com/api/tineraries/comment/${id}`, {}, {
+            const res = await axios.post(`https://mytinerary-backend-aybar.herokuapp.com/api/tineraries/comment/${id}`, {}, {
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }
@@ -71,7 +71,7 @@ const commentActions = {
             //         'Authorization': 'Bearer ' + token
             //     }
             // })
-            const res = await axios.put('https://mytinerary-aybar.herokuapp.com/api/tineraries/comment', { data }, {
+            const res = await axios.put('https://mytinerary-backend-aybar.herokuapp.com/api/tineraries/comment', { data }, {
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }
