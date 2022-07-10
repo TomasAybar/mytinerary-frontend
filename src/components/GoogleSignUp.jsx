@@ -38,7 +38,7 @@ export default function GoogleSignUp({ country } ) {
     useEffect(() => {
         /* global google */
         google.accounts.id.initialize({
-            client_id: '60710291903-kihnjrqu01bho3nmkhnfhu9p8595svno.apps.googleusercontent.com', // VARIABLE DE ENTORNO
+            client_id: '165937703872-ssuvm1p099865ipv8d1e77sdq95c15ao.apps.googleusercontent.com', // VARIABLE DE ENTORNO
             callback: handleCallbackResponse
         });
 
