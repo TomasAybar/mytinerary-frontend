@@ -29,7 +29,7 @@ const Hero = () => {
 
                 {/* SLOGAN */}
                 <div className='text-white text-center uppercase font-bold lg:text-3xl md:text-2xl sm:text-2xl text-lg mb-12'>
-                    <p>Find your perfect trip, designed by insiders who know and love their cities!</p>
+                    <p>Find your perfect trip, designed by insiders who know and love their cities!!</p>
                 </div>
 
                 {/* CTA */}
