@@ -232,9 +232,9 @@ const ButtonCollapsible = (props) => {
                                                     }}
                                                     alt={element.userID.firstName}
                                                     src={
-                                                        '/^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;'.test(element.userID.photoUrl)
-                                                            ? element.userID.photoUrl
-                                                            : avatar
+                                                        /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/.test(element.userID.photoUrl)
+                                                ? element.userID.photoUrl
+                                                : avatar
 
                                                     }
                                                 />
