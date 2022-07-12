@@ -312,7 +312,7 @@ const ButtonCollapsible = (props) => {
                         type='text'
                         className='text-black rounded-md shadow-md p-4 w-full mx-auto mt-8 text-center'
                         placeholder='new comment..'
-                        value={inputCommentEdit}
+                        // value={inputCommentEdit}
                         onKeyUp={(e) => setInputCommentEdit(e.target.value)}
                     />
                     <div className='flex justify-center items-center gap-4'>
