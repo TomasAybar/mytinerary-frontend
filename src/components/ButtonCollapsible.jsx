@@ -52,7 +52,7 @@ const ButtonCollapsible = (props) => {
 
         if (inputComment.value.length < 5) {
 
-            toast.error('short comment', { duration: 3000 })
+            toast.error('The comment must have more than five letters', { duration: 3000 })
 
         } else {
 
