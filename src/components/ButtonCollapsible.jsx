@@ -50,7 +50,7 @@ const ButtonCollapsible = (props) => {
     // agrega un comentario nuevo
     const addComment = async () => {
 
-        if (inputComment.value.length < 5) {
+        if (inputComment.value.trim().length < 5) {
 
             toast.error('The comment must have more than five letters', { duration: 3000 })
 
@@ -92,7 +92,7 @@ const ButtonCollapsible = (props) => {
     // se ejecuta en el BOTON MODIFY del modal
     const editComment = async () => {
 
-        if (inputCommentEdit.length < 5) {
+        if (inputCommentEdit.trim().length < 5) {
 
             toast.error('short comment', { duration: 3000 })
 
@@ -312,6 +312,7 @@ const ButtonCollapsible = (props) => {
                         type='text'
                         className='text-black rounded-md shadow-md p-4 w-full mx-auto mt-8 text-center'
                         placeholder='new comment..'
+                        value={inputComment}
                         onKeyUp={(e) => setInputCommentEdit(e.target.value)}
                     />
                     <div className='flex justify-center items-center gap-4'>

@@ -21,11 +21,7 @@ function classNames(...classes) {
 
 function NavBar(props) {
 
-    // console.log(props.user.photoUrl)
-
     const btnSignOut = async () => {
-
-        // console.log('click');
 
         await props.signOutUser(); // llamo a mi action para borrar el token
 

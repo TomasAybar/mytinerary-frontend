@@ -19,15 +19,15 @@ const Footer = () => {
 
                 <div className='flex justify-center items-center'>
 
-                    <a href="http://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/jmot4_" target="_blank" rel="noopener noreferrer">
                         <TwitterIcon sx={{ fontSize: '2rem', marginRight: '5px' }} />
                     </a>
 
-                    <a href="http://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/jmot4" target="_blank" rel="noopener noreferrer">
                         <InstagramIcon sx={{ fontSize: '2rem', marginRight: '5px' }} />
                     </a>
 
-                    <a href="http://www.github.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/tomasaybar" target="_blank" rel="noopener noreferrer">
                         <GitHubIcon sx={{ fontSize: '2rem', marginRight: '5px' }} />
                     </a>
 
