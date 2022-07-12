@@ -17,7 +17,7 @@ const ButtonCollapsible = (props) => {
     const [tin, setTin] = useState() // guardo mi itinerario
     const [activities, setActivities] = useState([]); // guardo mis actividades
     const [inputComment, setInputComment] = useState(''); // guardo el valor de mi input de agregar
-    const [inputCommentEdit, setInputCommentEdit] = useState(''); // Guardo el valor de mi input de edit
+    const [inputCommentEdit, setInputCommentEdit] = useState(inputComment); // Guardo el valor de mi input de edit
     const [commentID, setCommentID] = useState(); // guardo el id del comentario que se esta editando
     const [reload, setReload] = useState(false); // recarga la pagina
 
@@ -312,7 +312,7 @@ const ButtonCollapsible = (props) => {
                         type='text'
                         className='text-black rounded-md shadow-md p-4 w-full mx-auto mt-8 text-center'
                         placeholder='new comment..'
-                        value={inputComment}
+                        value={inputCommentEdit}
                         onKeyUp={(e) => setInputCommentEdit(e.target.value)}
                     />
                     <div className='flex justify-center items-center gap-4'>
