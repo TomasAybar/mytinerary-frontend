@@ -141,19 +141,6 @@ const ButtonCollapsible = (props) => {
         setReload(!reload)
     }
 
-
-    const isUrl = (url, avatar) => {
-        var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
-        // return matcher.test(url);
-        if (matcher.test(url)) {
-            console.log(url)
-            // return url
-        } else {
-            console.log(avatar)
-            // return avatar
-        }
-    }
-
     return (
 
         <>
@@ -177,12 +164,7 @@ const ButtonCollapsible = (props) => {
                                             }}
                                             className='rounded-md bg-cover bg-no-repeat bg-center mb-2'
                                         />
-                                        {/* <img
-                                            src={activity?.image}
-                                            className='w-full'
-                                            style={{ height: '250px' }}
-                                            alt={activity.name}
-                                        /> */}
+                                        
                                         <p className='text-center text-white uppercase mb-8'>{activity.name}</p>
                                     </div>
                                 )
@@ -206,17 +188,6 @@ const ButtonCollapsible = (props) => {
                                         <div className='bg-blue-700 lg:w-4/5 mx-auto py-4 md:p-2 rounded-md text-white detail-info grid grid-cols-4 mb-3 container'>
 
                                             {/* IMAGEN DE USUARIO */}
-                                            {/* <div
-                                                className='col-span-1 hidden md:block rounded-md'
-                                                style={{
-                                                    backgroundImage: `url('${element.userID.photoUrl}')`,
-                                                    backgroundSize: 'cover',
-                                                    backgroundPosition: 'center',
-                                                    backgroundRepeat: 'no-repeat',
-                                                    width: '100px',
-                                                    height: '100px'
-                                                }}
-                                            /> */}
                                             <div
                                                 className='col-span-1 hidden md:block rounded-md'
                                                 style={{
@@ -225,7 +196,6 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
-                                                    onClick={(e) => isUrl(element.userID.photoUrl, avatar)}
                                                     style={{
                                                         maxWidth: '100%',
                                                         minHeight: '100%'
