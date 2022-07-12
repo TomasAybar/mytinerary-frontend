@@ -50,7 +50,7 @@ const ButtonCollapsible = (props) => {
     // agrega un comentario nuevo
     const addComment = async () => {
 
-        if (inputComment.value.length < 5 || inputComment.trim() == '') {
+        if (inputComment.value.length < 5) {
 
             toast.error('The comment must have more than five letters', { duration: 3000 })
 
@@ -92,7 +92,7 @@ const ButtonCollapsible = (props) => {
     // se ejecuta en el BOTON MODIFY del modal
     const editComment = async () => {
 
-        if (inputCommentEdit.length < 5 || inputCommentEdit.trim() == '') {
+        if (inputCommentEdit.length < 5) {
 
             toast.error('The comment must have more than five letters', { duration: 3000 })
 
