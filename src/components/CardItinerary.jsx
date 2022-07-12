@@ -96,7 +96,7 @@ const CardItinerary = (props) => {
                                             }
                                         </div>
                                     )
-                                    : <FavoriteIcon onClick={() => toast.error('realiza signup para likear!', { duration: 4500 })}/> // SI NO EXISTE EL USUARIO
+                                    : <FavoriteIcon onClick={() => toast.error('First sign in to click LIKE', { duration: 4500 })}/> // SI NO EXISTE EL USUARIO
                             }
                             <p className='ml-1 text-xl'>{tin?.likes.length}</p> {/* CANTIDAD DE LIKES NUMERO */}
                         </div>

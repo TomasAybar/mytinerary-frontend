@@ -287,7 +287,7 @@ const ButtonCollapsible = (props) => {
                                     <input
                                         type='text'
                                         className='w-3/4 p-2 rounded-md shadow text-black'
-                                        placeholder='Realiza signup para comentar..'
+                                        placeholder='First sign in to comment..'
                                         disabled
                                     />
 
