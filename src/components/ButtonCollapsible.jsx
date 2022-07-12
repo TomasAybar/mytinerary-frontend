@@ -236,14 +236,14 @@ const ButtonCollapsible = (props) => {
                                                             id={element._id}
                                                             onClick={removeComment}
                                                             className='p-2 font-bold bg-red-400 hover:bg-red-500 rounded-md shadow'
-                                                            style={{width: '6rem'}}
-                                                            >Delete</button>
+                                                            style={{ width: '6rem' }}
+                                                        >Delete</button>
 
                                                         <button
                                                             onClick={() => { exeEdit(element._id) }}
                                                             className='p-2 font-bold bg-green-400 hover:bg-green-500 rounded-md shadow'
-                                                            style={{width: '6rem'}}
-                                                            >Edit</button>
+                                                            style={{ width: '6rem' }}
+                                                        >Edit</button>
                                                     </div>
                                                 )
                                             )
@@ -292,6 +292,7 @@ const ButtonCollapsible = (props) => {
                                     />
 
                                     <AddCommentIcon
+                                        onClick={() => toast.error('First sign in to comment..', { duration: 4500 })}
                                         disabled
                                         style={{ marginLeft: '5px', fontSize: '40px' }}
                                     />
