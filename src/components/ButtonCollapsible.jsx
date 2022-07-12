@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import activityActions from '../redux/actions/activityActions';
 import tineraryActions from '../redux/actions/tineraryActions';
 import commentActions from '../redux/actions/commentActions'
-// import avatar from '../assets/images/avatar.png';
+import avatar from '../assets/images/avatar.png';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import toast from 'react-hot-toast';
 import { Modal } from 'react-responsive-modal';
@@ -142,10 +142,17 @@ const ButtonCollapsible = (props) => {
     }
 
     
-    const isUrl = (url) => {
+    const isUrl = (url, avatar) => {
         var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
         // return matcher.test(url);
-        console.log(matcher.test(url))
+        // console.log(matcher.test(url))
+
+        if (matcher.test(url)) {
+            return url
+        } else {
+            return avatar
+        }
+
     }
 
     return (
@@ -219,13 +226,13 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
-                                                    onClick={(e) => isUrl(element.userID.photoUrl)}
+                                                    onClick={(e) => isUrl(element.userID.photoUrl, avatar)}
                                                     style={{
                                                         maxWidth: '100%',
                                                         minHeight: '100%'
                                                     }}
-                                                    src={element.userID.photoUrl}
                                                     alt={element.userID.firstName}
+                                                    src={() => isUrl(element.userID.photoUrl, avatar)}
                                                 />
                                             </div>
 
