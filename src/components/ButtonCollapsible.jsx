@@ -194,7 +194,7 @@ const ButtonCollapsible = (props) => {
                                         <div className='bg-blue-700 lg:w-4/5 mx-auto py-4 md:p-2 rounded-md text-white detail-info grid grid-cols-4 mb-3 container'>
 
                                             {/* IMAGEN DE USUARIO */}
-                                            <div
+                                            {/* <div
                                                 className='col-span-1 hidden md:block rounded-md'
                                                 style={{
                                                     backgroundImage: `url('${element.userID.photoUrl}')`,
@@ -204,7 +204,19 @@ const ButtonCollapsible = (props) => {
                                                     width: '100px',
                                                     height: '100px'
                                                 }}
-                                            />
+                                            /> */}
+                                            <div
+                                                className='col-span-1 hidden md:block rounded-md'
+                                                style={{
+                                                    width: '100px',
+                                                    height: '100px'
+                                                }}
+                                            >
+                                                <img
+                                                    src={element.userID.photoUrl}
+                                                    alt={element.userID.firstName}
+                                                />
+                                            </div>
 
                                             {/* NOMBRE Y COMENTARIO DEL USUARIO */}
                                             <div
