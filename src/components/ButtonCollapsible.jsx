@@ -142,16 +142,10 @@ const ButtonCollapsible = (props) => {
     }
 
     
-    const isUrl = (url, avatar) => {
+    const isUrl = (url) => {
         var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
         // return matcher.test(url);
-        // console.log(matcher.test(url))
-
-        if (matcher.test(url)) {
-            return url
-        } else {
-            return avatar
-        }
+        console.log(matcher.test(url))
 
     }
 
@@ -226,13 +220,17 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
-                                                    onClick={(e) => isUrl(element.userID.photoUrl, avatar)}
+                                                    onClick={(e) => isUrl(element.userID.photoUrl)}
                                                     style={{
                                                         maxWidth: '100%',
                                                         minHeight: '100%'
                                                     }}
                                                     alt={element.userID.firstName}
-                                                    src={() => isUrl(element.userID.photoUrl, avatar)}
+                                                    src={
+                                                        isUrl(element.userID.photoUrl)
+                                                            ? element.userID.photoUrl
+                                                            : avatar
+                                                    }
                                                 />
                                             </div>
 
