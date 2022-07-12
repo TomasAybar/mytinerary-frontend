@@ -141,6 +141,12 @@ const ButtonCollapsible = (props) => {
         setReload(!reload)
     }
 
+    
+    const isUrl = (url) => {
+        var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
+        // return matcher.test(url);
+        console.log(matcher.test(url))
+    }
 
     return (
 
@@ -213,7 +219,7 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
-                                                    onClick={(e) => console.log(e.target)}
+                                                    onClick={(e) => isUrl(element.userID.photoUrl)}
                                                     style={{
                                                         maxWidth: '100%',
                                                         minHeight: '100%'
