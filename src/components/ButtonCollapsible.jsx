@@ -213,6 +213,10 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
+                                                    style={{
+                                                        maxWidth: '100%',
+                                                        minHeight: '100%'
+                                                    }}
                                                     src={element.userID.photoUrl}
                                                     alt={element.userID.firstName}
                                                 />
