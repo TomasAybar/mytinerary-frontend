@@ -213,6 +213,7 @@ const ButtonCollapsible = (props) => {
                                                 }}
                                             >
                                                 <img
+                                                    onClick={(e) => console.log(e.target)}
                                                     style={{
                                                         maxWidth: '100%',
                                                         minHeight: '100%'
