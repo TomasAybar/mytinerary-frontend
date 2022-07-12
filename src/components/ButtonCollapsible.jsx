@@ -141,7 +141,7 @@ const ButtonCollapsible = (props) => {
         setReload(!reload)
     }
 
-    
+
     const isUrl = (url) => {
         var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
         // return matcher.test(url);
@@ -226,10 +226,11 @@ const ButtonCollapsible = (props) => {
                                                         minHeight: '100%'
                                                     }}
                                                     alt={element.userID.firstName}
-                                                    src={
+                                                    src={() => {
                                                         isUrl(element.userID.photoUrl)
                                                             ? element.userID.photoUrl
                                                             : avatar
+                                                    }
                                                     }
                                                 />
                                             </div>
